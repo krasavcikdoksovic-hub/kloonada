@@ -6,11 +6,7 @@
   <title>🎪 Цирковая Идея | KLOUNADA</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
       background: #1a0e0b;
@@ -29,12 +25,10 @@
       position: relative;
     }
 
-    body::before,
-    body::after {
+    body::before, body::after {
       content: "";
       position: fixed;
-      top: 0;
-      bottom: 0;
+      top: 0; bottom: 0;
       width: 25px;
       background: repeating-linear-gradient(0deg, #8b0000 0px, #8b0000 20px, #ffd700 20px, #ffd700 40px);
       z-index: 0;
@@ -54,7 +48,6 @@
       position: relative;
       z-index: 2;
       border: 3px dashed #b22222;
-      transition: all 0.2s;
     }
 
     .circus-card::before {
@@ -75,15 +68,8 @@
     }
 
     @media (max-width: 500px) {
-      .circus-card {
-        padding: 2rem 1.2rem;
-        border-radius: 2rem;
-      }
-      .circus-card::before {
-        font-size: 1.3rem;
-        padding: 0.2rem 1rem;
-        letter-spacing: 4px;
-      }
+      .circus-card { padding: 2rem 1.2rem; border-radius: 2rem; }
+      .circus-card::before { font-size: 1.3rem; padding: 0.2rem 1rem; letter-spacing: 4px; }
     }
 
     h1 {
@@ -95,7 +81,7 @@
       justify-content: center;
       gap: 0.4rem;
       margin-top: 0.8rem;
-      margin-bottom: 0.3rem;
+      margin-bottom: 0.8rem;
       text-shadow: 2px 2px 0 #ffd700;
       letter-spacing: 1px;
       text-transform: uppercase;
@@ -126,7 +112,6 @@
       text-decoration: none;
       border: 2px solid #8b0000;
       transition: 0.2s;
-      letter-spacing: 0.5px;
     }
 
     .channel-link:hover {
@@ -142,7 +127,7 @@
       font-weight: bold;
       padding: 0.7rem 1.2rem;
       border-radius: 2rem;
-      margin-bottom: 1.8rem;
+      margin-bottom: 1.5rem;
       display: flex;
       align-items: center;
       gap: 0.6rem;
@@ -150,92 +135,63 @@
       border: 2px dotted #ffd700;
     }
 
-    .form-group {
-      margin-bottom: 1.6rem;
-    }
+    .form-group { margin-bottom: 1.2rem; }
 
     label {
       display: flex;
       align-items: center;
       gap: 0.5rem;
       font-weight: 700;
-      font-size: 1rem;
+      font-size: 0.95rem;
       color: #4a0000;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.4rem;
     }
 
     label i {
       color: #b22222;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       background: #ffd700;
       padding: 0.3rem;
       border-radius: 50%;
     }
 
-    .required-star {
-      color: #b22222;
-      font-size: 1.4rem;
-      margin-left: 0.2rem;
-    }
+    .required-star { color: #b22222; font-size: 1.2rem; margin-left: 0.2rem; }
 
     input, textarea {
       width: 100%;
-      padding: 0.9rem 1.2rem;
-      font-size: 1rem;
+      padding: 0.8rem 1rem;
+      font-size: 0.95rem;
       font-family: inherit;
       border: 2px solid #b22222;
-      border-radius: 1.5rem;
+      border-radius: 1.2rem;
       background: #fffef7;
       outline: none;
       color: #2d0a0a;
       transition: 0.2s;
-      box-shadow: inset 0 2px 5px rgba(0,0,0,0.05);
     }
 
-    textarea {
-      resize: vertical;
-      min-height: 110px;
-    }
+    textarea { resize: vertical; min-height: 100px; }
 
     input:focus, textarea:focus {
       border-color: #ffd700;
-      box-shadow: 0 0 0 5px rgba(255,215,0,0.5), inset 0 1px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 0 0 4px rgba(255,215,0,0.4);
       background: #ffffff;
     }
 
     .file-upload-area {
       border: 3px dashed #b22222;
-      border-radius: 1.5rem;
-      padding: 1.5rem 1rem;
+      border-radius: 1.2rem;
+      padding: 1.2rem 1rem;
       text-align: center;
       background: #ffefd5;
       cursor: pointer;
-      transition: 0.2s;
       position: relative;
     }
 
-    .file-upload-area i {
-      font-size: 2.8rem;
-      color: #b22222;
-      filter: drop-shadow(0 4px 4px rgba(0,0,0,0.2));
-    }
-
-    .file-upload-area:hover {
-      background: #ffd700;
-      border-color: #8b0000;
-    }
-
-    .file-upload-text {
-      font-weight: 700;
-      color: #4a0000;
-      font-size: 1rem;
-    }
-
-    .file-hint {
-      color: #5a2e2e;
-      font-weight: 500;
-      font-size: 0.8rem;
-    }
+    .file-upload-area i { font-size: 2.4rem; color: #b22222; }
+    .file-upload-area:hover { background: #ffd700; border-color: #8b0000; }
+    .file-upload-text { font-weight: 700; color: #4a0000; font-size: 0.95rem; }
+    .file-hint { color: #5a2e2e; font-weight: 500; font-size: 0.75rem; }
 
     #file-input {
       position: absolute;
@@ -247,41 +203,31 @@
       cursor: pointer;
     }
 
-    .file-list {
-      margin-top: 0.8rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-    }
+    .file-list { margin-top: 0.6rem; display: flex; flex-wrap: wrap; gap: 0.4rem; }
 
     .file-chip {
       background: #b22222;
       color: #ffd700;
-      padding: 0.4rem 1rem;
+      padding: 0.3rem 0.8rem;
       border-radius: 2rem;
       font-weight: bold;
       display: flex;
       align-items: center;
       gap: 0.4rem;
+      font-size: 0.85rem;
       border: 1px solid #ffd700;
     }
 
-    .remove-file-btn {
-      background: none;
-      border: none;
-      color: #ffd700;
-      cursor: pointer;
-      font-size: 1rem;
-    }
+    .remove-file-btn { background: none; border: none; color: #ffd700; cursor: pointer; font-size: 0.9rem; }
 
     .error-message {
       color: #ffd700;
       background: #b22222;
       font-weight: bold;
-      padding: 0.4rem 0.8rem;
+      padding: 0.3rem 0.7rem;
       border-radius: 1rem;
-      margin-top: 0.4rem;
-      font-size: 0.8rem;
+      margin-top: 0.3rem;
+      font-size: 0.75rem;
     }
 
     .btn-submit {
@@ -289,15 +235,15 @@
       color: #ffd700;
       border: 3px solid #ffd700;
       width: 100%;
-      padding: 1rem;
+      padding: 0.9rem;
       font-weight: 800;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       border-radius: 2rem;
       cursor: pointer;
       transition: 0.2s;
       text-transform: uppercase;
       letter-spacing: 2px;
-      box-shadow: 0 8px 0 #4a0000;
+      box-shadow: 0 6px 0 #4a0000;
       margin-top: 0.5rem;
     }
 
@@ -306,30 +252,26 @@
       color: #b22222;
       border-color: #b22222;
       transform: translateY(-2px);
-      box-shadow: 0 10px 0 #4a0000;
+      box-shadow: 0 8px 0 #4a0000;
     }
 
-    .btn-submit:disabled {
-      opacity: 0.6;
-      cursor: not-allowed;
-      transform: none;
-      box-shadow: 0 4px 0 #4a0000;
-    }
+    .btn-submit:disabled { opacity: 0.6; cursor: not-allowed; transform: none; box-shadow: 0 4px 0 #4a0000; }
 
     .success-message {
       background: #ffd700;
       color: #4a0000;
       font-weight: bold;
-      padding: 1rem;
-      border-radius: 1.5rem;
-      margin-top: 1.5rem;
+      padding: 0.8rem;
+      border-radius: 1.2rem;
+      margin-top: 1rem;
       border: 2px solid #b22222;
+      text-align: center;
     }
 
     .loading-spinner {
       display: inline-block;
-      width: 20px;
-      height: 20px;
+      width: 18px;
+      height: 18px;
       border: 3px solid #ffd700;
       border-top-color: transparent;
       border-radius: 50%;
@@ -337,18 +279,13 @@
       margin-right: 8px;
     }
 
-    @keyframes spin {
-      to { transform: rotate(360deg); }
-    }
-
+    @keyframes spin { to { transform: rotate(360deg); } }
     .hidden { display: none !important; }
   </style>
 </head>
 <body>
 <div class="circus-card">
-  <h1>
-    <i class="fas fa-hat-wizard"></i> ИДЕЯ ДЛЯ ПОСТА
-  </h1>
+  <h1><i class="fas fa-hat-wizard"></i> ИДЕЯ ДЛЯ ПОСТА</h1>
 
   <a href="https://t.me/Klounada_WePlay" target="_blank" class="channel-link">
     <i class="fab fa-telegram-plane"></i> t.me/Klounada_WePlay
@@ -368,10 +305,10 @@
     <div class="form-group">
       <label><i class="fas fa-file-image"></i> Доказательства <span class="required-star">*</span></label>
       <div class="file-upload-area" id="drop-area">
-        <i class="fas fa-upload"></i>
-        <span class="file-upload-text">Загрузите файлы</span>
+        <i class="fas fa-upload"></i><br>
+        <span class="file-upload-text">Загрузите файлы</span><br>
         <span class="file-hint">JPG, PNG, PDF, DOCX (до 10 МБ)</span>
-        <input type="file" id="file-input" multiple accept="image/*,.pdf,.doc,.docx,.zip,.txt">
+        <input type="file" id="file-input" multiple accept="image/*,.pdf,.doc,.docx">
       </div>
       <div id="file-list" class="file-list"></div>
       <div id="file-error" class="error-message hidden">🎪 Прикрепите хотя бы один файл!</div>
@@ -394,10 +331,8 @@
 
 <script>
   (function() {
-    // ⚙️ НАСТРОЙКИ TELEGRAM
-    const BOT_TOKEN = '8329703757:AAFBVjiXnkvQ0vcMBNw1uztVjzcF4xqTUtM';
-    // Пока оставляем пустым - получим автоматически
-    let CHAT_ID = '';
+    const BOT_TOKEN = '8603328948:AAHHe33wgCz49WzQtAW9chwtCoe0Un8RaAg';
+    const CHAT_ID = '8680660665';
 
     const form = document.getElementById('idea-form');
     const ideaTextarea = document.getElementById('idea-text');
@@ -410,54 +345,6 @@
     const submitBtn = document.getElementById('submit-btn');
 
     let selectedFiles = [];
-
-    // Функция для автоматического получения chat_id
-    async function getChatId() {
-      try {
-        const response = await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/getUpdates`);
-        const data = await response.json();
-        
-        if (data.ok && data.result.length > 0) {
-          // Берем chat_id из последнего сообщения
-          const lastMessage = data.result[data.result.length - 1];
-          if (lastMessage.message && lastMessage.message.chat) {
-            CHAT_ID = lastMessage.message.chat.id;
-            console.log('✅ Chat ID найден:', CHAT_ID);
-            return true;
-          }
-        }
-        
-        console.warn('⚠️ Chat ID не найден. Напишите боту сообщение!');
-        return false;
-      } catch (err) {
-        console.error('Ошибка получения chat_id:', err);
-        return false;
-      }
-    }
-
-    // Пытаемся получить chat_id при загрузке
-    getChatId().then(found => {
-      if (!found) {
-        // Показываем инструкцию
-        const instruction = document.createElement('div');
-        instruction.style.cssText = `
-          background: #fff3cd;
-          color: #856404;
-          padding: 1rem;
-          border-radius: 1rem;
-          margin-bottom: 1rem;
-          border: 2px solid #ffc107;
-          font-weight: bold;
-        `;
-        instruction.innerHTML = `
-          🔧 <strong>Внимание!</strong> Для работы нужно:<br>
-          1. Открыть бота: <a href="https://t.me/Klounada_WePlay_bot" target="_blank">@Klounada_WePlay_bot</a><br>
-          2. Написать любое сообщение (например, "Привет")<br>
-          3. Обновить эту страницу
-        `;
-        form.insertBefore(instruction, form.firstChild);
-      }
-    });
 
     function updateFileList() {
       fileListContainer.innerHTML = '';
@@ -498,19 +385,15 @@
     }
 
     fileInput.addEventListener('change', () => {
-      if (fileInput.files.length > 0) {
-        addFiles(fileInput.files);
-      }
+      if (fileInput.files.length > 0) addFiles(fileInput.files);
     });
 
     const dropArea = document.getElementById('drop-area');
-    ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+    ['dragenter', 'dragover', 'drop'].forEach(eventName => {
       dropArea.addEventListener(eventName, ev => ev.preventDefault());
     });
     dropArea.addEventListener('drop', e => {
-      if (e.dataTransfer.files.length > 0) {
-        addFiles(e.dataTransfer.files);
-      }
+      if (e.dataTransfer.files.length > 0) addFiles(e.dataTransfer.files);
     });
 
     ideaTextarea.addEventListener('input', () => {
@@ -539,81 +422,53 @@
 
       if (!valid) return;
 
-      // Проверяем chat_id
-      if (!CHAT_ID) {
-        await getChatId();
-        if (!CHAT_ID) {
-          alert('🎪 Сначала напишите боту!\n\n1. Откройте @Klounada_WePlay_bot\n2. Напишите любое сообщение\n3. Обновите страницу');
-          return;
-        }
-      }
-
-      // Показываем загрузку
       submitBtn.disabled = true;
       const originalHTML = submitBtn.innerHTML;
       submitBtn.innerHTML = '<span class="loading-spinner"></span> Отправляем...';
 
-      try {
-        // Отправляем ВСЕ файлы в одном сообщении через sendMediaGroup
-        if (selectedFiles.length === 1) {
-          // Один файл - sendDocument
-          const formData = new FormData();
-          formData.append('chat_id', CHAT_ID);
-          formData.append('caption', `🎪 *Новая идея для поста!*\n\n📝 ${text}\n🔗 ${sourceInput.value.trim() || 'нет ссылки'}`);
-          formData.append('parse_mode', 'Markdown');
-          formData.append('document', selectedFiles[0]);
+      let allOk = true;
 
+      for (let i = 0; i < selectedFiles.length; i++) {
+        const file = selectedFiles[i];
+        const caption = `🎪 *Новая идея!*\n\n📝 *Текст:* ${text}\n🔗 *Ссылка:* ${sourceInput.value.trim() || 'не указана'}\n\n📎 Файл ${i + 1} из ${selectedFiles.length}`;
+
+        const formData = new FormData();
+        formData.append('chat_id', CHAT_ID);
+        formData.append('caption', caption);
+        formData.append('parse_mode', 'Markdown');
+        formData.append('document', file);
+
+        try {
           const response = await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendDocument`, {
             method: 'POST',
             body: formData
           });
-
-          if (!response.ok) throw new Error('Ошибка отправки');
-        } else {
-          // Несколько файлов - отправляем первый с текстом, остальные без
-          for (let i = 0; i < selectedFiles.length; i++) {
-            const formData = new FormData();
-            formData.append('chat_id', CHAT_ID);
-            
-            if (i === 0) {
-              formData.append('caption', `🎪 *Новая идея для поста!*\n\n📝 ${text}\n🔗 ${sourceInput.value.trim() || 'нет ссылки'}\n📎 Файл ${i + 1}/${selectedFiles.length}`);
-              formData.append('parse_mode', 'Markdown');
-            } else {
-              formData.append('caption', `📎 Файл ${i + 1}/${selectedFiles.length}`);
-            }
-            
-            formData.append('document', selectedFiles[i]);
-
-            const response = await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendDocument`, {
-              method: 'POST',
-              body: formData
-            });
-
-            if (!response.ok) {
-              const err = await response.json();
-              throw new Error(err.description || 'Ошибка отправки');
-            }
+          const result = await response.json();
+          if (!result.ok) {
+            allOk = false;
+            alert('❌ Ошибка: ' + (result.description || 'неизвестная'));
           }
+        } catch (err) {
+          allOk = false;
+          alert('❌ Сетевая ошибка: ' + err.message);
         }
 
-        // Успех!
+        if (i < selectedFiles.length - 1) {
+          await new Promise(r => setTimeout(r, 1000));
+        }
+      }
+
+      if (allOk) {
         successBox.classList.remove('hidden');
         form.reset();
         selectedFiles = [];
         syncInput();
         updateFileList();
-
-        setTimeout(() => {
-          successBox.classList.add('hidden');
-        }, 5000);
-
-      } catch (err) {
-        console.error('Ошибка:', err);
-        alert('🎪 Ошибка отправки!\n\n' + err.message);
-      } finally {
-        submitBtn.disabled = false;
-        submitBtn.innerHTML = originalHTML;
+        setTimeout(() => successBox.classList.add('hidden'), 5000);
       }
+
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = originalHTML;
     });
   })();
 </script>
